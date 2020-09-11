@@ -23,13 +23,14 @@ def alarm():
         alarmH = alarmH + 12 #FOR 12 HR FORMAT
     while(1==1):
         if(alarmH == datetime.datetime.now().hour and
-           alarmM == datetime.datetime.now().minute) :
+           alarmM == datetime.datetime.now().minute) 
             print("Time to wake up")
             playsound("c:/Users/Administrator/Desktop/project/beep.mp3")#PLAY ALRAM SOUND 
             break
             
 def light_on():
     mybolt.digitalWrite(0, 'HIGH')#TO TURN ON LIGHT 
+    print('Lights are on ')
 def room_temp():
     r = mybolt.analogRead('A0') 
     data = json.loads(r)
